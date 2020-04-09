@@ -5,11 +5,11 @@ Po 10 otwarciach bramy jesteśmy informowani o tym że powinniśmy wezwać serwi
 ********************************************************************************************
 Zad 2 Zawory
 Program działa w sposób następujący:
-Na początku ustawiamy stan naszych zaworów: czy maja być one otwarte czy też zamknięte. Po wyborcze wyskakują tam komunikaty na wyjściu z informacją o ich stanie. Gdy napełniamy nasz zbiornik za pomocą analogowego inputa zawory powinny być w stanie:
+Na początku ustawiamy stan naszych zaworów: czy maja być one otwarte czy też zamknięte. Po wyborze wyskakują tam komunikaty na wyjściu z informacją o ich stanie. Gdy napełniamy nasz zbiornik za pomocą analogowego inputa zawory powinny być w stanie:
 - Zawór napełniający otwarty 
 - Zawór spustowy zamknięty
-Napełniając zbiornik wodą możemy zauważyć, że przy 7 litrach uruchamia się alarm informujący o tym że poziom wody osiagnął poziom maksymalny. Alarm ten wyłącza automatycznie zawór napełniający, zmieniając jego stan na zamknięty. Następnie ręcznie możemy otworzyc zawór spustowy po czym zmniejszych analogowym inputem wartości. Przy 5 litrach wody wyłączany jest alarm, który również swoim zamknięciem otwiera zawór napełniający co powoduje, że przy obu zaworach otwartych stan wody się nie zmienia czym jesteśmy informowani za pomocą outputa.
-Wtedy powinniśmy zamknąc zawór napełniający i kontynuować "spuszczanie" wody ze zbiornika.
+Napełniając zbiornik wodą możemy zauważyć, że przy 7 litrach uruchamia się alarm informujący o tym że poziom wody osiagnął poziom maksymalny. Alarm ten wyłącza automatycznie zawór napełniający, zmieniając jego stan na zamknięty. Następnie ręcznie możemy otworzyc zawór spustowy po czym zmniejszych analogowym inputem ilość wody w zbiorniku. Przy 5 litrach wody wyłączany jest alarm, który również swoim wyłączeniem otwiera zawór napełniający co powoduje, że przy obu zaworach otwartych stan wody się nie zmienia czym jesteśmy informowani za pomocą outputa.
+Wtedy powinniśmy zamknąc zawór napełniający i kontynuować zmniejszanie wody w zbiorniku.
 Gdy stan wody osiągnie 2 litry, jesteśmy ostrzegani alarmem, że stan wody jest minimalny. Alarm ten zamyka zawór spustowy.
 ********************************************************************************************
 Zad 3 Własny pomysł
