@@ -98,7 +98,7 @@ void Zapisz_do_zm(int krawedzie, int wierzcholki, int **graf2, int v_start)
 
     int x = wierzcholki - 1 ;
                        
-    for(int i = 0; i < x; i++)
+    for(int i = 0; i < wierzcholki; i++)
                                          
     {
         graf2[i+1][0] = i;
@@ -447,6 +447,7 @@ void** Wczytaj_z_Pliku(int** graf, int& kraw, int& wierzch, int& start, ifstream
 *   Funkcja wczytujaca dane ze zmiennej do grafu                                                           *
 ************************************************************************************************************
 */
+/*
 void** Wczytaj_Zm(int** graf, int& kraw, int& wierzch, int& start, int **graf2)
 {
     int x = min(kraw, wierzch) -1 ;
@@ -460,6 +461,7 @@ void** Wczytaj_Zm(int** graf, int& kraw, int& wierzch, int& start, int **graf2)
        
     }
 }
+*/
 int Licz_D(int kraw, int wierzch)
 {
     int D;
@@ -636,7 +638,6 @@ void Stworz_i_Zmierz(fstream &wyjscie)
      
 
     int** graf;
-    int** graf2;
 
     wyjscie.open("Wynik_GenProg2.txt", ios_base::app);  
                                                
@@ -658,36 +659,28 @@ void Stworz_i_Zmierz(fstream &wyjscie)
                 {
                     cout<<krawedzie[i][j]<<"        "<<endl;
                     graf = new int* [krawedzie[i][j]];    
-                    graf2 = new int* [krawedzie[i][j]];
-
+                    
                     for(int c = 0; c < krawedzie[i][j]; c++)
                     {
                         graf[c] = new int [3];
-                        graf2[c] = new int [3];
                     }
                     int start = rand()%wierzcholki[i];
                         
 
-                    Zapisz_do_zm(krawedzie[i][j], wierzcholki[i], graf2, start);
-                    
-                    
-                    Wczytaj_Zm(graf, krawedzie[i][j], wierzcholki[i], start, graf2); 
-
+                    Zapisz_do_zm(krawedzie[i][j], wierzcholki[i], graf, start);
+                   
                     L_Znajdz_droge(graf, krawedzie[i][j], wierzcholki[i], start, wyjscie);        
                     
-                    //M_Znajdz_droge(graf, krawedzie[i][j], wierzcholki[i], start, wyjscie);  
+                    M_Znajdz_droge(graf, krawedzie[i][j], wierzcholki[i], start, wyjscie);  
                     
                 
                     for(int z = 0; z < krawedzie[i][j]; z++) 
                     {
 
-                        delete [] graf[z];
-                        delete [] graf2[z];
+                        delete [] graf[z];                   
                         
                     }
-                    delete [] graf;
-                    delete [] graf2;
-                    
+                    delete [] graf;                   
                 }
             }
         }
