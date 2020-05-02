@@ -114,8 +114,8 @@ void Zapisz_do_zm(int krawedzie, int wierzcholki, int **graf2, int v_start)
         while(n < l_wyk && tmp < n_wierzch - 2)
         {
             graf2[x+n][0] = n_wierzch -1;
-            graf2[x+n][0] = tmp;
-            graf2[x+n][0] = rand()%10+1;
+            graf2[x+n][1] = tmp;
+            graf2[x+n][2] = rand()%10+1;
             
             n++;
             tmp++;
