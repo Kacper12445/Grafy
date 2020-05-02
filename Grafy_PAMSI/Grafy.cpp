@@ -203,7 +203,6 @@ void W_Sciezke(int* prev, int* koszt, int wierzch)
 ************************************************************************************************************
 *                                   L_Bellman_Ford                                                         *
 *   Algorytm Bellmana-forda dla listy - szukanie najkrotszej drogi                                         *
-*   max_int - maksymalna wartosc int w 32bit -> 64bit 9223372036854775807                                  *
 *   koszt - wskaznik na tablice dynamiczna kosztow dojscia                                                 *
 *   prev - wskaznik na tablice dynamiczna poprzednikow                                                     *
 ************************************************************************************************************
@@ -250,7 +249,6 @@ void L_Bellman_Ford( int kraw, int wierzch, int start, List** tab_list)
 ************************************************************************************************************
 *                                   M_Bellman_Ford                                                         *
 *   Algorytm Bellmana-forda dla macierzy - szukanie najkrotszej drogi                                      *
-*   max_int - maksymalna wartosc int w 32bit -> 64bit 9223372036854775807                                  *
 *   koszt - wskaznik na tablice dynamiczna kosztow dojscia                                                 *
 *   prev - wskaznik na tablice dynamiczna poprzednikow                                                     *
 ************************************************************************************************************
