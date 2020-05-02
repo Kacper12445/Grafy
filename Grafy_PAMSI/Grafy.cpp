@@ -339,9 +339,8 @@ void L_Graf(int& kraw, int& wierzch, int& start, int** graf, List** tab_list, Li
         tab_list[c] = NULL;
 
     }
-    int x = min(kraw,wierzch) - 1 ;
     
-    for(int c = 0; c <= x; c++)   
+    for(int c = 0; c < wierzch; c++)   
     {
 
         v1 = graf[c][0];    
@@ -371,11 +370,11 @@ void L_Graf(int& kraw, int& wierzch, int& start, int** graf, List** tab_list, Li
 */
 void W_Macierz(int** tmp_graf, int wierzch)
 {
-    for(int c = 0; c < wierzch; c++)
+    for(int i = 0; i < wierzch; i++)
     {
-        for(int v = 0; v < wierzch; v++)
+        for(int j = 0; j < wierzch; j++)
         {
-            cout << tmp_graf[c][v] <<" ";
+            cout << tmp_graf[i][j] <<" ";
         }
         cout<<endl;
     }
@@ -409,8 +408,8 @@ void** M_Graf(int& kraw, int& wierzch, int& start, int** graf, int** tmp_graf)
         p++;
     }
 
-    int x = min(kraw,wierzch) -1;
-    for (int v = 0; v <= x; ++v)
+    
+    for (int v = 0; v < wierzch; ++v)
     {
         v1 = graf[v][0];        
         v2 = graf[v][1];
@@ -441,27 +440,6 @@ void** Wczytaj_z_Pliku(int** graf, int& kraw, int& wierzch, int& start, ifstream
     }
 }
 
-/*
-************************************************************************************************************
-*                                   Wczytaj_Zm                                                             *
-*   Funkcja wczytujaca dane ze zmiennej do grafu                                                           *
-************************************************************************************************************
-*/
-/*
-void** Wczytaj_Zm(int** graf, int& kraw, int& wierzch, int& start, int **graf2)
-{
-    int x = min(kraw, wierzch) -1 ;
-   
-    for(int i = 0; i <= x; i++)    
-    {
-        graf[i][0] = graf2[i][0];
-        graf[i][1] = graf2[i][1];
-        graf[i][2] = graf2[i][2];
-
-       
-    }
-}
-*/
 int Licz_D(int kraw, int wierzch)
 {
     int D;
